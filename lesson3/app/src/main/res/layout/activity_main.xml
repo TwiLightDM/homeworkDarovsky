@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/profile"
+            android:textSize="20sp"
+            android:layout_marginStart="37dp"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayoutInfo"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/gray"
+        android:orientation="horizontal"
+        android:paddingStart="20dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayoutHeader">
+
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="63dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/container"
+            android:layout_gravity="center_vertical">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/GuideLineLeftInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/GuideLineTopInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="12dp" />
+
+            <TextView
+                android:id="@+id/TextName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/GuideLineLeftInfo"
+                app:layout_constraintTop_toTopOf="@id/GuideLineTopInfo" />
+
+            <TextView
+                android:id="@+id/TextSurname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/surname"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/GuideLineLeftInfo"
+                app:layout_constraintTop_toBottomOf="@id/TextName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/secondName"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@id/GuideLineLeftInfo"
+                app:layout_constraintTop_toBottomOf="@id/TextSurname" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/GuideLineRightInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="96dp" />
+
+            <TextView
+                android:id="@+id/TextDateOfBirthString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dateOfBirthString"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/GuideLineRightInfo"
+                app:layout_constraintTop_toBottomOf="@id/GuideLineTopInfo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/dateOfBirthNumbers"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/GuideLineRightInfo"
+                app:layout_constraintTop_toBottomOf="@id/TextDateOfBirthString" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="252dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayoutInfo">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/GuideLineTopText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="24dp" />
+
+        <TextView
+            android:id="@+id/TextCityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/GuideLineTopText"
+            android:text="@string/cityName"
+            android:textColor="@color/grayText"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/TextCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TextCityName"
+            android:layout_marginTop="8dp"
+            android:text="@string/city"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/TextAboutName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TextCity"
+            android:layout_marginTop="20dp"
+            android:text="@string/aboutName"
+            android:textColor="@color/grayText"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TextAboutName"
+            android:layout_marginTop="8dp"
+            android:text="@string/about"
+            android:textSize="14sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <android.widget.Button
+        android:layout_width="328dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:text="@string/editProfile"
+        android:textColor="@color/white"
+        android:background="@color/blue"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
